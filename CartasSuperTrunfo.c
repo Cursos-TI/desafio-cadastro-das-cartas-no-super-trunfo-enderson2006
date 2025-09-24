@@ -58,7 +58,7 @@ percapita2 = (pib2 / populacao2);
     printf("Estado: %s\n", estado1);
     printf("Codigo: %s\n", codigo1);
     printf("Nome da cidade: %s\n", cidade1);
-    printf("População: %.f\n", populacao1);
+    printf("População: %f\n", populacao1);
     printf("Área: %f\n", area1);
     printf("Pib: %f\n", pib1);
     printf("Número de pontos turisticos: %d\n", pontos1);
@@ -76,24 +76,37 @@ percapita2 = (pib2 / populacao2);
     printf("Densidade populacional: %.2f\n", densidade2);
     printf("Pib per capita: %.3f\n", percapita2);
 
-    int CompPopulacao = (populacao1 >= populacao2);
-    int CompArea = (area1 >= area2);
-    int CompPib = (pib1 >= pib2);
-    int CompPontos = (pontos1 >= pontos2);
-    int CompDens = (densidade1 <= densidade2);
-    int CompPercapita = (percapita1 >= percapita2);
 
-    printf("Comparação de cartas\n");
-    printf("(Resultado 1 para cidade 1 ganhadora e resultado 0 para a cidade 2 ganhadora)\n");
-    printf("População vencedora: %d\n", CompPopulacao);
-    printf("Área vencedora: %d\n", CompArea);
-    printf("PIB vencedor: %d\n", CompPib);
-    printf("Números de pontos turisticos vencedor: %d\n", CompPontos);
-    printf("Densidade populacional vencedora: %d\n", CompDens);
-    printf("PIB per capita vencedora: %d\n", CompPercapita);
-    
-
-
+    printf("*Comparação de cartas*\n");
+if(populacao1 > populacao2){
+    printf("A cidade com a maior população é: %s\n", cidade1);
+} else{
+    printf("A cidade com a maior população é: %s\n", cidade2);
+}
+if(area1 > area2){
+    printf("A cidade com a maior área é: %s\n", cidade1);
+} else{
+    printf("A cidade com a maior área é: %s\n", cidade2);
+}
+if(pib1 > pib2){
+    printf("A cidade com o maior pib é: %s\n", cidade1);
+} else{
+    printf("A cidade com o maior pib é: %s\n", cidade2);
+} if(pontos1 > pontos1){
+    printf("A cidade com mais pontos turisticos é: %s\n", cidade1);
+} else{
+    printf("A cidade com mais pontos turisticos é: %s\n", cidade2);
+} 
+if(densidade1 < densidade2){
+    printf("A cidade com a menor densidade populacional é: %s\n", cidade1);
+} else{
+    printf("A cidade com a menor densidade populacional é: %s\n", cidade2);
+} 
+if(percapita1 > percapita2){
+    printf("A cidade com o maior pib per capita é: %s\n", cidade1);
+} else{
+    printf("A cidade com o maior pib per capita é: %s\n", cidade2);
+} 
     return 0;
 
 

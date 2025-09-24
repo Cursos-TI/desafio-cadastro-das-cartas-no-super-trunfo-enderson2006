@@ -49,16 +49,16 @@ int main(){
     printf("Quantos pontos turisticos a sua cidade tem? ");
     scanf("%d", &pontos2);
 
-    densidade1 = (populacao1 / area1);
-    densidade2 = (populacao2 / area2);
-    percapita1 = (pib1 / populacao1);
-    percapita2 = (pib2 / populacao2);
+densidade1 = (populacao1 / area1);
+densidade2 = (populacao2 / area2);
+percapita1 = (pib1 / populacao1);
+percapita2 = (pib2 / populacao2);
 
     printf("Carta 1:\n");
     printf("Estado: %s\n", estado1);
     printf("Codigo: %s\n", codigo1);
     printf("Nome da cidade: %s\n", cidade1);
-    printf("População: %f\n", populacao1);
+    printf("População: %.f\n", populacao1);
     printf("Área: %f\n", area1);
     printf("Pib: %f\n", pib1);
     printf("Número de pontos turisticos: %d\n", pontos1);
@@ -75,6 +75,24 @@ int main(){
     printf("Número de pontos turisticos: %d\n", pontos2);
     printf("Densidade populacional: %.2f\n", densidade2);
     printf("Pib per capita: %.3f\n", percapita2);
+
+    int CompPopulacao = (populacao1 >= populacao2);
+    int CompArea = (area1 >= area2);
+    int CompPib = (pib1 >= pib2);
+    int CompPontos = (pontos1 >= pontos2);
+    int CompDens = (densidade1 <= densidade2);
+    int CompPercapita = (percapita1 >= percapita2);
+
+    printf("Comparação de cartas\n");
+    printf("(Resultado 1 para cidade 1 ganhadora e resultado 0 para a cidade 2 ganhadora)\n");
+    printf("População vencedora: %d\n", CompPopulacao);
+    printf("Área vencedora: %d\n", CompArea);
+    printf("PIB vencedor: %d\n", CompPib);
+    printf("Números de pontos turisticos vencedor: %d\n", CompPontos);
+    printf("Densidade populacional vencedora: %d\n", CompDens);
+    printf("PIB per capita vencedora: %d\n", CompPercapita);
+    
+
 
     return 0;
 
